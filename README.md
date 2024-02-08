@@ -36,3 +36,16 @@ GymPass style app
 Serve para por configurações do NPM, no caso com o código **save-exact=true** faz com que as versões que forem instaladas sejam as exatas (Ai sempre que rodar um npm i vai vir a versão exata do package.json)
 * Sempre é importante atualizar as dependências.
 * Existe um bot chamado renovate que automatiza essas atualizações e roda os testes para ver se não quebrou, caso os testes passar ele cria uma PR no Git falando que pode atualizar a versão da dependência, se o teste falhar ele fala qual teste falhou para fazer os ajustes necessários.
+
+### ⬆️Importações do TS
+Basta ir no **tsconfig.json** e descomentar o escrever o seguinte código:
+```json
+ {
+ ...
+ "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src/*"]
+    }, 
+ } 
+```
+Isso faz ser possivel fazer imports com *@/env* ao invés de *'../../../../env'*
