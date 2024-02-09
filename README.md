@@ -49,3 +49,16 @@ Basta ir no **tsconfig.json** e descomentar o escrever o seguinte código:
  } 
 ```
 Isso faz ser possivel fazer imports com *@/env* ao invés de *'../../../../env'*
+
+### ORM (Object Relational Mapper)
+É mapear as tabelas do banco de dados dentro do código, significa que você pode traduzir cada tabela do banco em uma classe por exemplo:
+
+```typescript
+class User {
+  name: string
+  email: string
+}
+```
+
+#### Nesse projeto usaremos o [Prisma.io](https://www.prisma.io/). Mas o que ele faz de diferente?
+Ele tem migrations automatizadas e suporta vários bancos de dados.
