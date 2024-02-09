@@ -62,3 +62,11 @@ class User {
 
 #### Nesse projeto usaremos o [Prisma.io](https://www.prisma.io/). Mas o que ele faz de diferente?
 Ele tem migrations automatizadas e suporta vários bancos de dados.
+
+**Getting started**:
+```bash
+npm i prisma -D
+npx prisma init
+```
+* O prisma é instalado como dependência de desenvolvimento porque é a parte de cli dele.
+* É importante ter a extensão do Prisma instalada no seu vscode.
