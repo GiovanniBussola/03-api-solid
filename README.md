@@ -68,5 +68,38 @@ Ele tem migrations automatizadas e suporta vários bancos de dados.
 npm i prisma -D
 npx prisma init
 ```
-* O prisma é instalado como dependência de desenvolvimento porque é a parte de cli dele.
-* É importante ter a extensão do Prisma instalada no seu vscode.
+- O prisma é instalado como dependência de desenvolvimento porque é a parte de cli dele.
+- É importante ter a extensão do Prisma instalada no seu vscode.
+- É importante editar as configurações de usuário para formatar o código do Prisma ao salvar.
+  - ```json
+    {
+      "[prisma]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "Prisma.prisma"
+      }
+    }
+    ```
+
+As tabelas são chamadas de **models**, aqui está um exemplo:
+```c
+model User {
+  id String @id @default(uuid())
+  name String
+  email String @unique
+
+  @@map("users")
+}
+```
+- **@** são configurações para a **coluna**
+- **@@** são configurações para a **tabela**
+
+#### Para gerar as migrations:
+```bash
+npx prisma generate
+```
+
+#### Para instalar o client para acessar o banco:
+*Esse sim é o de produção*.
+```bash
+npm i @prisma/client
+```
