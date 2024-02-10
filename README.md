@@ -50,7 +50,7 @@ Basta ir no **tsconfig.json** e descomentar o escrever o seguinte código:
 ```
 Isso faz ser possivel fazer imports com *@/env* ao invés de *'../../../../env'*
 
-### ORM (Object Relational Mapper)
+### 🗺️ORM (Object Relational Mapper)
 É mapear as tabelas do banco de dados dentro do código, significa que você pode traduzir cada tabela do banco em uma classe por exemplo:
 
 ```typescript
@@ -103,3 +103,27 @@ npx prisma generate
 ```bash
 npm i @prisma/client
 ```
+
+#### Comandos úteis
+Rodar as migrations:
+```bash
+npx prisma migrate dev
+```
+
+Abrir o Prisma Studio:
+```bash
+npx prisma studio
+```
+
+### 🐋Docker:
+É recomendável usar a imagem da Bitnami para Postgres pois possui algumas travas de segurança (Não mudar senha do root etc)
+
+Para criar um container:
+```bash
+docker run --name api-solid-pg -e POSTGRESQL_USERNAME=docker -e POSTGRESQL_PASSWORD=docker -e POSTGRESQL_DATABASE=apisolid -p 5432:5432 bitnami/postgresql
+```
+- **--name** é o nome que o container vai ter
+- **-e** é a variável ambiente que ele tem (pode informar várias, ler a doc para ver as opções)
+- **-p** é a porta que o container vai rodar: **5432:5432**
+  - O lado **esquerdo** é a porta do **computador**
+  - O lado **direito** é a porta do **container**
