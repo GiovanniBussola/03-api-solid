@@ -127,3 +127,14 @@ docker run --name api-solid-pg -e POSTGRESQL_USERNAME=docker -e POSTGRESQL_PASSW
 - **-p** é a porta que o container vai rodar: **5432:5432**
   - O lado **esquerdo** é a porta do **computador**
   - O lado **direito** é a porta do **container**
+
+### SOLID:
+SOLID tem 5 letras, S de fantáStico (brinks). Cada um significa uma coisa então bora lá!
+
+#### D - Dependency Inversion Principle
+Resumidamente é fazer os seus serviços (nesse projeto os casos de uso) não dependerem de uma dependência.
+Ou seja, temos um UseCase que no constructor tem um const prismaUsersRepository = new PrismaUsersRepository().
+
+Se por ventura esse arquivo não existir mais ou ter que trocar, precisaremos trocar em um monte de arquivos.
+
+Ao invés do usecase instanciar as dependencias, o usecase já vai receber elas como parâmetros.
