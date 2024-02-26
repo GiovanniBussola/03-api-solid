@@ -128,6 +128,9 @@ docker run --name api-solid-pg -e POSTGRESQL_USERNAME=docker -e POSTGRESQL_PASSW
   - O lado **esquerdo** é a porta do **computador**
   - O lado **direito** é a porta do **container**
 
+### Vitest:
+Ferramenta para testes, o vite-config-ts serve para ele conseguir ler os **paths** do projeto (Aqueles que são @/src e etc)
+
 ### SOLID:
 SOLID tem 5 letras, S de fantáStico (brinks). Cada um significa uma coisa então bora lá!
 
