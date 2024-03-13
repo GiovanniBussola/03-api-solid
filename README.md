@@ -141,3 +141,10 @@ Ou seja, temos um UseCase que no constructor tem um const prismaUsersRepository 
 Se por ventura esse arquivo não existir mais ou ter que trocar, precisaremos trocar em um monte de arquivos.
 
 Ao invés do usecase instanciar as dependencias, o usecase já vai receber elas como parâmetros.
+
+
+### TDD:
+Test-driven Development
+Ele é composto por 3 passos: RED, GREEN, REFACTOR ou seja:
+
+Primeiro eu estouro um erro, depois eu corrijo esse erro e depois eu refatoro
